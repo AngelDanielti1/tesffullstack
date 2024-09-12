@@ -1,0 +1,10 @@
+<div>
+  <button routerLink="/edit-person">Crear</button>
+  <ul>
+    <li *ngFor="let person of persons">
+      {{ person.nombre }} {{ person.apellido }}
+      <button (click)="deletePerson(person.id)">Eliminar</button>
+      <button routerLink="/edit-person/{{ person.id }}">Editar</button>
+    </li>
+  </ul>
+</div>

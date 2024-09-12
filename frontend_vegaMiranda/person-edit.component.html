@@ -1,0 +1,22 @@
+<div>
+  <h2>{{ person.id ? 'Editar' : 'Crear' }} Persona</h2>
+  <form (ngSubmit)="save()">
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" [(ngModel)]="person.nombre" name="nombre" required>
+
+    <label for="apellido">Apellido:</label>
+    <input id="apellido" [(ngModel)]="person.apellido" name="apellido" required>
+
+    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+    <input id="fechaNacimiento" type="date" [(ngModel)]="person.fechaNacimiento" name="fechaNacimiento" required>
+
+    <label for="puesto">Puesto:</label>
+    <input id="puesto" [(ngModel)]="person.puesto" name="puesto" required>
+
+    <label for="sueldo">Sueldo:</label>
+    <input id="sueldo" type="number" [(ngModel)]="person.sueldo" name="sueldo" required>
+
+    <button type="submit">Guardar</button>
+    <button (click)="cancel()">Cancelar</button>
+  </form>
+</div>
